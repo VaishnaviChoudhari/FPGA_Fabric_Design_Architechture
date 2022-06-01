@@ -13,8 +13,8 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
   * [FPGA Introduction](FPGA-Introduction)
     * [What Is FPGA And FPGA Architecture?s](#What-Is-FPGA-And-FPGA-Architecture)
     * [Look-up Tables, FPGA Programming And Design Methodology](#Look-up-Tables-FPGA-Programming-And-Design-Methodology)
-    * [Detailed Description of Course Content](#Detailed-Description-of-Course-Content)
-  * [Labwork for RISC-V software toolchain](#Labwork-for-RISC-V-software-toolchain)
+    * [Introduction To Basys FPGA Boards And Vivado](#Introduction-To-Basys-FPGA-Boards-And-Vivado)
+  * [Vivado Counter](#Vivado-Counter)
     * [C Program to compute sum from 1 to N](#C-Program-to-compute-sum-from-1-to-N)
     * [RISCV GCC compile and Disassemble](#RISCV-GCC-compile-and-Disassemble)
     * [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
@@ -156,7 +156,35 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
 * Programmable I/O blocks - Configurable I/Os for external interface connections
 * Programmable Interconnect - Wires to connect inputs, CLBs
 
-## Look-up Tables, FPGA Programming And Design Methodology
+### Look-up Tables, FPGA Programming And Design Methodology
+
+Lookup Table with N inputs can be used to implement any combinational function of N inputs
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171406122-1f94d32e-2c8c-4715-9a82-8e87d12722db.png"> 
+</p>
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171407648-4c48ab0a-3c39-407f-8385-4e9bac49d7d5.png"> 
+</p>
+
+### Introduction To Basys FPGA Boards And Vivado
+
+**What are not synthesizable codes**
+
+* Delays #100 - Write counters, and generate a signal after a certain count to create a delay
+* Initial block (used only in testbench)
+* UDP (User defined primitive) - nmos, pmos
+* Runtime/Dynamic Memory Allocation: Indeterminate sizes cannot be synthesised -> Convert into fixed size memory
+* Infinite loops -> Convert into a finite loop
+
+**Different ways of programming**
+* Local programming on the Basys3 Board
+* Remote Programming
+  * Inputs through Virtual Inputs/Outputs and Output observed on the board
+  * Inputs through Virtual Inputs/Outputs and Output observed on Integrated Logic Analyser (ILA)
+
+## Vivado Counter
 
 
  
