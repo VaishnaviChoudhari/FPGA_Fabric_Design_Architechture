@@ -16,7 +16,7 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
     * [Introduction To Basys FPGA Boards And Vivado](#Introduction-To-Basys-FPGA-Boards-And-Vivado)
   * [Vivado Counter](#Vivado-Counter)
     * [Vivado-Verilog explanation](#Vivado-Verilog-explanation)
-    * [RISCV GCC compile and Disassemble](#RISCV-GCC-compile-and-Disassemble)
+    * [Vivado Simulation Elaboration](#Vivado-Simulation-Elaboration)
     * [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
   * [Integer number representation](#Integer-number-representation)
     * [64-bit Number System For Unsigned Numbers](#64-bit-Number-System-For-Unsigned-Numbers) 
@@ -190,4 +190,18 @@ Lookup Table with N inputs can be used to implement any combinational function o
 
 ### Vivado-Verilog explanation
 
- 
+### Vivado Simulation Elaboration
+
+**Behavioural Simulation result for 4bit Counter** 
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171993060-d8f62a19-7b9d-472c-bce8-3130e0ad89d3.png"> 
+</p>
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171993200-0e573333-0cf1-437d-b450-afc0a06052e3.png"> 
+</p>
+
+
+
+
