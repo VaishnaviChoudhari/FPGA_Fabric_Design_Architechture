@@ -11,11 +11,11 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
 ***
 * [Day 1: ](#Day-1)
   * [FPGA Introduction](FPGA-Introduction)
-    * [What Is FPGA And FPGA Architecture?s](#What-Is-FPGA-And-FPGA-Architecture)
+    * [What Is FPGA And FPGA Architecture?](#What-Is-FPGA-And-FPGA-Architecture)
     * [Look-up Tables, FPGA Programming And Design Methodology](#Look-up-Tables-FPGA-Programming-And-Design-Methodology)
     * [Introduction To Basys FPGA Boards And Vivado](#Introduction-To-Basys-FPGA-Boards-And-Vivado)
   * [Vivado Counter](#Vivado-Counter)
-    * [C Program to compute sum from 1 to N](#C-Program-to-compute-sum-from-1-to-N)
+    * [Vivado-Verilog explanation](#Vivado-Verilog-explanation)
     * [RISCV GCC compile and Disassemble](#RISCV-GCC-compile-and-Disassemble)
     * [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
   * [Integer number representation](#Integer-number-representation)
@@ -105,6 +105,8 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
  
  ## FPGA Introduction
  
+ ### What Is FPGA And FPGA Architecture?
+ 
  * **History of Programmable logic**
    * PLA - Programmable logic devices
    * CPLD - Complex Programmable logic devices
@@ -186,5 +188,6 @@ Lookup Table with N inputs can be used to implement any combinational function o
 
 ## Vivado Counter
 
+### Vivado-Verilog explanation
 
  
