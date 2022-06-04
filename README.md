@@ -17,10 +17,11 @@ In this workshop, we broadly cover 5 modules. The first module focuses on taking
   * [Vivado Counter](#Vivado-Counter)
     * [Vivado-Verilog explanation](#Vivado-Verilog-explanation)
     * [Vivado Simulation Elaboration](#Vivado-Simulation-Elaboration)
-    * [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
-  * [Integer number representation](#Integer-number-representation)
-    * [64-bit Number System For Unsigned Numbers](#64-bit-Number-System-For-Unsigned-Numbers) 
-    * [64-bit Number System For Signed Numbers](#64-bit-Number-System-For-Signed-Numbers)
+    * [Vivado map pins](#Vivado-map-pins)
+    * [Theory Slack](#Theory-Slack)
+  * [VIO Counter](#VIO-Counter)
+    * [Introduction Theory](#Introduction-Theory) 
+    * [VIO Code](#VIO-Code)
     * [Lab for Signed and Unsigned Numbers](#Lab-for-Signed-and-Unsigned-Numbers)
 ***
 * [Day 2: Introduction to ABI and basic verification flow](#Day-2-Introduction-to-ABI-and-basic-verification-flow)
@@ -201,6 +202,107 @@ Lookup Table with N inputs can be used to implement any combinational function o
 <p align="center" width="100%">
 <img src="https://user-images.githubusercontent.com/68154219/171993200-0e573333-0cf1-437d-b450-afc0a06052e3.png"> 
 </p>
+
+### Vivado map pins
+
+* Open Elaborated Design -> I/O Planning (Upper Right corner drop down)
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171999574-9d66514a-f4cf-4868-8932-33df1d632560.png"> 
+</p>
+
+* Schematic
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171999766-9f240e04-4ae4-4f36-a10a-21ce51b90818.png"> 
+</p>
+
+* To generate constraint file
+Change I/O Std and Package pin as shown. Assign Leds to the counter_out. Observe the datasheet of board to assign the pins. Save the file as constraint.
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171999828-9f55011d-79d7-4753-925e-60ec68aac7c2.png"> 
+</p>
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/171999927-e2b907a4-b89a-4604-9297-01687e5654b1.png"> 
+</p>
+
+### Theory Slack
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172000088-1940ed57-3da8-4a11-a34f-2051369c8d6d.png"> 
+</p>
+
+Tcq + Tlogic < (T - Tsetup)
+
+###  Vivado Synthesis
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172000444-81e72305-91d1-46dc-b381-8e20006211b6.png"> 
+</p>
+
+* Go to Constraint Wizard -> select clk and enter frequency. Run the synthesis again and open the Timing Report
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172001331-c2a63d63-4a06-4169-a2c4-77bfb0d900dc.png"> 
+</p>
+
+* Schematics 
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172021718-61019962-f667-4bf9-8958-48ab5b8ea6c5.png"> 
+</p>
+
+* Timimg Summary
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172021791-a669f2a7-5e14-45cb-b2b4-5ea61d317aae.png"> 
+</p>
+
+* Power Summary
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172023114-803143c3-96ae-4dc3-a37a-02443a8e91c9.png"> 
+</p>
+
+## VIO Counter
+
+### Introduction Theory
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172023847-57e09e38-128c-4ffd-be54-7cca8136fa2e.png"> 
+</p>
+
+### VIO Code
+
+**Steps**
+* Modify the counter code accordingly to make all inputs into wires and output to reg except the clock
+* Create a VIO template using IP Catalog
+  * Add probes - input and output
+  * Change the probe width accordingly
+* Click on IP sources -> instantiation templates -> veo for verilog , vho for vhdl
+* Copy paste the template into your code
+  * Change the module probes names of VIO template just copied
+  * Input and output should be assigned according to the comments mentioned here
+*  Design is ready to simulate
+
+* **VIO instance**
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172024786-96f9c1d2-1e01-4277-b4a5-3355d363cafe.png"> 
+</p>
+
+* **Copy paste vio instance and make changes in input output in the code**
+
+<p align="center" width="100%">
+<img src="https://user-images.githubusercontent.com/68154219/172024899-6096ddb4-5ec1-400c-bfdb-ac68bd134a72.png"> 
+</p>
+
+
+
+
+
 
 
 
