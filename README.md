@@ -281,7 +281,7 @@ Tcq + Tlogic < (T - Tsetup)
 * Create a VIO template using IP Catalog
   * Add probes - input and output
   * Change the probe width accordingly
-* Click on IP sources -> instantiation templates -> veo for verilog , vho for vhdl
+* Click on IP sources -> instantiation templates(search vio -> select reqd probe count for i/o) -> veo for verilog , vho for vhdl
 * Copy paste the template into your code
   * Change the module probes names of VIO template just copied
   * Input and output should be assigned according to the comments mentioned here
